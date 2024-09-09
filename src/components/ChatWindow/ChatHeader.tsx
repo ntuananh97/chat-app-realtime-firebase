@@ -1,5 +1,5 @@
 import { AntDesignOutlined, UserAddOutlined } from "@ant-design/icons";
-import { Avatar, Button, Divider } from "antd";
+import { Avatar, Button } from "antd";
 import useStore from "../../stores";
 import { QueryConstraint, where } from "firebase/firestore";
 import { useMemo, useState } from "react";
@@ -15,7 +15,6 @@ const ChatHeader = () => {
   const [visibleInviteModal, setVisibleInviteModal] = useState(false);
 
   const conditions: QueryConstraint[] = useMemo(() => {
-    console.log("currentRoomInfo.members run", currentRoomInfo.members);
 
     return [where("uid", "in", currentRoomInfo.members)];
   }, [currentRoomInfo.members]);
@@ -28,7 +27,6 @@ const ChatHeader = () => {
   const membersNotCurrentUser = members.filter(
     (member) => member.uid !== currentUser?.uid
   );
-  console.log("ChatHeader ~ members:", { members, currentRoomInfo });
 
   return (
     <div className="chatwindow__header">
@@ -67,7 +65,6 @@ const ChatHeader = () => {
         </div>
       </div>
 
-      <Divider />
 
       <InviteUserModal
         visible={visibleInviteModal}

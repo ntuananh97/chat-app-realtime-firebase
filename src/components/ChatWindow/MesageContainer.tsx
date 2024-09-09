@@ -18,11 +18,10 @@ const MesageContainer = () => {
     collections.messages,
     conditions
   );
-  console.log("MesageContainer ~ messages:", messages)
 
 
   return (
-    <ul className="chat-message__list">
+   <ul className="chat-message__list">
         {messages.map((item) => (<Message key={item.id} data={item} />))}
     </ul>
   )

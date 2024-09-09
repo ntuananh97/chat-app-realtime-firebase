@@ -1,16 +1,17 @@
 .chat-message {
     &__list {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         overflow-y: auto;
-        gap: 20px;
+        max-height: 100%;
+        width: 100%;
         padding: 0 15px;
     }
 
     &__item {
         align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
 
         &.me {
             justify-content: flex-end;

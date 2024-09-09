@@ -1,5 +1,9 @@
 @use '../mixins' as *;
 
+* {
+    box-sizing: border-box
+}
+
 .center-position {
     @include center-by-position;
 }
