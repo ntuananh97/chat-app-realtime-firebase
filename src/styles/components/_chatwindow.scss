@@ -1,0 +1,23 @@
+.chatwindow {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header-container, &__main {
+        padding: 10px 15px;
+    }
+
+    &__main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__editor {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+
+}

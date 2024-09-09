@@ -1,0 +1,19 @@
+@use '../mixins' as *;
+
+.center-position {
+    @include center-by-position;
+}
+.c-b-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-normal-flex {
+    display: flex;
+    align-items: center;
+}
